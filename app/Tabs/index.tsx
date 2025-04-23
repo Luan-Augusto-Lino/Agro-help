@@ -9,13 +9,13 @@ export default function HomeScreen() {
   const router = useRouter();
 
   const pages = [
-    "/pagina1",
-    "/pagina2",
-    "/pagina3",
-    "/pagina4",
-    "/pagina5",
-    "/pagina6",
-  ] as const;
+    { route: "/pagina1" as const, label: "Cálculo de Adubo" },
+    { route: "/pagina2" as const, label: "Cálculo de Agrotóxicos" },
+    { route: "/pagina3" as const, label: "Previsão do Tempo" },
+    { route: "/pagina4" as const, label: "Calendário de Plantio" },
+    { route: "/pagina5" as const, label: "Armazém" },
+    { route: "/pagina6" as const, label: "Dicas" },
+  ];
 
   return (
     <View style={styles.container}>
@@ -25,9 +25,9 @@ export default function HomeScreen() {
           <TouchableOpacity
             key={index}
             style={styles.button}
-            onPress={() => router.push(page)}
+            onPress={() => router.push(page.route)}
           >
-            <Text style={styles.buttonText}>Página {index + 1}</Text>
+            <Text style={styles.buttonText}>{page.label}</Text>
           </TouchableOpacity>
         ))}
       </View>
@@ -50,20 +50,23 @@ const styles = StyleSheet.create({
   grid: {
     flexDirection: "row",
     flexWrap: "wrap",
-    justifyContent: "center",
+    justifyContent: "space-between",
+    width: "90%",
   },
   button: {
-    width: 100,
-    height: 100,
+    flexBasis: "48%",
+    height: 120,
     backgroundColor: "#4CAF50",
     justifyContent: "center",
     alignItems: "center",
-    margin: 10,
+    marginBottom: 20,
     borderRadius: 10,
+    padding: 10,
   },
   buttonText: {
     color: "#fff",
     fontWeight: "bold",
     textAlign: "center",
+    fontSize: 16,
   },
 });
