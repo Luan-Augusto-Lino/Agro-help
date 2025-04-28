@@ -11,6 +11,9 @@ export default function SobreScreen() {
       <Text style={styles.text}>
         Este aplicativo tem como objetivo auxiliar produtores rurais com acesso rápido a recursos e informações úteis.
       </Text>
+      <Text style={styles.text}>
+        Feito como trabalho de extensão para faculdade de engenharia de software na Estácio
+      </Text>
     </View>
   );
 }
@@ -29,5 +32,6 @@ const styles = StyleSheet.create({
   },
   text: {
     fontSize: 18,
+    marginBottom: 20,
   },
 });
