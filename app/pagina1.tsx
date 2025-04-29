@@ -110,14 +110,14 @@ export default function Pagina1() {
 - N: ${Ndisp} | P: ${Pdisp} | K: ${Kdisp}
 
 🧮 Necessidade Total:
-- N: ${total.N.toFixed(2)} kg
-- P: ${total.P.toFixed(2)} kg
-- K: ${total.K.toFixed(2)} kg
+- N: ${total.N.toFixed(1)} kg
+- P: ${total.P.toFixed(1)} kg
+- K: ${total.K.toFixed(1)} kg
 
 📦 Quantidade de Adubo a Aplicar:
-- Para N: ${adubo.N.toFixed(2)} kg
-- Para P: ${adubo.P.toFixed(2)} kg
-- Para K: ${adubo.K.toFixed(2)} kg
+- Para N: ${adubo.N.toFixed(1)} kg
+- Para P: ${adubo.P.toFixed(1)} kg
+- Para K: ${adubo.K.toFixed(1)} kg
     `.trim();
 
     setResultado(texto);
